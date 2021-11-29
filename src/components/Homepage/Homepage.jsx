@@ -9,7 +9,13 @@ const Homepage = () => {
         background: '#0F1624',
       }}
     >
-      <img src={background} alt="background" width="100%" height="500" />
+      <img
+        src={background}
+        alt="background"
+        width="100%"
+        height="500"
+        style={{ opacity: '0.5' }}
+      />
       <div
         style={{
           marginLeft: '6rem',
@@ -24,7 +30,9 @@ const Homepage = () => {
           height: '15rem',
         }}
       >
-        <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>
+        <div
+          style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '500' }}
+        >
           Find amazing things of INDIA! Anytime and everywhere
         </div>
         <div>
