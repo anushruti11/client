@@ -1,3 +1,5 @@
+import './Homepage.css';
+
 const TopDestination = () => {
   return (
     <>
@@ -51,76 +53,11 @@ const TopDestination = () => {
                   justifyContent: 'space-evenly',
                 }}
               >
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '150px',
-                    fontSize: '0.75rem',
-                    color: '#1A2B49',
-                    borderRadius: '1rem',
-                    lineHeight: '1.5rem',
-                    textAlign: 'center',
-                    margin: '0.5rem',
-                  }}
-                >
-                  Sightseeing Tours
-                </div>
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '150px',
-                    fontSize: '0.75rem',
-                    color: '#1A2B49',
-                    borderRadius: '1rem',
-                    lineHeight: '1.5rem',
-                    textAlign: 'center',
-                    margin: '0.5rem',
-                  }}
-                >
-                  Sightseeing Tours
-                </div>
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '150px',
-                    fontSize: '0.75rem',
-                    color: '#1A2B49',
-                    borderRadius: '1rem',
-                    lineHeight: '1.5rem',
-                    textAlign: 'center',
-                    margin: '0.5rem',
-                  }}
-                >
-                  Sightseeing Tours
-                </div>
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '150px',
-                    fontSize: '0.75rem',
-                    color: '#1A2B49',
-                    borderRadius: '1rem',
-                    lineHeight: '1.5rem',
-                    textAlign: 'center',
-                    margin: '0.5rem',
-                  }}
-                >
-                  Sightseeing Tours
-                </div>
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '150px',
-                    fontSize: '0.75rem',
-                    color: '#1A2B49',
-                    borderRadius: '1rem',
-                    lineHeight: '1.5rem',
-                    textAlign: 'center',
-                    margin: '0.5rem',
-                  }}
-                >
-                  Sightseeing Tours
-                </div>
+                <div className="destination-badge">Sightseeing Tours</div>
+                <div className="destination-badge">Sightseeing Tours</div>
+                <div className="destination-badge">Sightseeing Tours</div>
+                <div className="destination-badge">Sightseeing Tours</div>
+                <div className="destination-badge">Sightseeing Tours</div>
               </div>
             </div>
           </div>

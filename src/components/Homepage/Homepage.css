@@ -1,0 +1,10 @@
+.destination-badge {
+  background: #fff;
+  width: 150px;
+  font-size: 0.75rem;
+  color: #1a2b49;
+  border-radius: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
