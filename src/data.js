@@ -10,6 +10,11 @@ const data = [
       { area: 'Golghar', description: 'This is golghar' },
       { area: 'Golghar', description: 'This is golghar' },
     ],
+    items: [
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+    ],
   },
   {
     id: '2',
@@ -22,9 +27,14 @@ const data = [
       { area: 'Golghar', description: 'This is golghar' },
       { area: 'Golghar', description: 'This is golghar' },
     ],
+    items: [
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+    ],
   },
   {
-    id: '1',
+    id: '3',
     name: 'Mumbai',
     places: [
       { area: 'Golghar', description: 'This is golghar' },
@@ -33,6 +43,11 @@ const data = [
       { area: 'Golghar', description: 'This is golghar' },
       { area: 'Golghar', description: 'This is golghar' },
       { area: 'Golghar', description: 'This is golghar' },
+    ],
+    items: [
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
+      { itemName: 'Madhubani Painting', description: 'Very Costly Painting' },
     ],
   },
 ];

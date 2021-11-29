@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import background from '../../assets/back.jpg';
 import TopDestination from './TopDestinations';
+import data from '../../data';
 
 const Homepage = () => {
+  const things = data.map((pieces) => pieces.items.map((thing) => thing));
   const [state, setState] = useState('');
   return (
     <div
@@ -129,6 +131,58 @@ const Homepage = () => {
 
       {/* top destinations */}
       <TopDestination />
+
+      {/* antiques things */}
+      <div style={{ padding: '1rem' }}>
+        <div
+          style={{
+            marginBottom: '2rem',
+            textAlign: 'center',
+            fontSize: '2rem',
+            fontWeight: '700',
+          }}
+        >
+          Top Antique Things Indegineous To That Place
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {things.map((item) => {
+            return item.map((piece, index) => {
+              return (
+                <div
+                  style={{
+                    background: '#fff',
+                    width: '300px',
+                    height: '350px',
+                    padding: '0.5rem',
+                    margin: '1rem',
+                  }}
+                  key={index}
+                >
+                  <img
+                    src="https://cdn.getyourguide.com/img/tour/5d9235037ef18.jpeg/68.webp"
+                    alt="item"
+                    width="200"
+                    height="80"
+                  />
+                  <div
+                    style={{
+                      color: '#63687A',
+                      fontSize: '1rem',
+                      textAlign: 'center',
+                    }}
+                  >
+                    {piece.itemName}
+                  </div>
+                  <div style={{ color: '#63687A', marginBottom: '0.5rem' }}>
+                    {piece.description}
+                  </div>
+                  <input type="button" value="Order Now!" />
+                </div>
+              );
+            });
+          })}
+        </div>
+      </div>
     </div>
   );
 };
