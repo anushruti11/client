@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import background from '../../assets/back.jpg';
-import TopDestination from './TopDestinations';
 import data from '../../data';
+import TopDestination from './TopDestinations';
 
 const Homepage = () => {
-  const things = data.map((pieces) => pieces.items.map((thing) => thing));
+  // const things = data.map((pieces) => pieces.items.map((thing) => thing));
   const [state, setState] = useState('');
   return (
     <div
@@ -130,58 +130,28 @@ const Homepage = () => {
       </div>
 
       {/* top destinations */}
-      <TopDestination />
+      <div
+        style={{
+          marginBottom: '2rem',
+          textAlign: 'center',
+          fontSize: '2.5rem',
+          fontWeight: '700',
+        }}
+      >
+        Explore our top destinations
+      </div>
 
-      {/* antiques things */}
-      <div style={{ padding: '1rem' }}>
-        <div
-          style={{
-            marginBottom: '2rem',
-            textAlign: 'center',
-            fontSize: '2rem',
-            fontWeight: '700',
-          }}
-        >
-          Top Antique Things Indegineous To That Place
-        </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {things.map((item) => {
-            return item.map((piece, index) => {
-              return (
-                <div
-                  style={{
-                    background: '#fff',
-                    width: '300px',
-                    height: '350px',
-                    padding: '0.5rem',
-                    margin: '1rem',
-                  }}
-                  key={index}
-                >
-                  <img
-                    src="https://cdn.getyourguide.com/img/tour/5d9235037ef18.jpeg/68.webp"
-                    alt="item"
-                    width="200"
-                    height="80"
-                  />
-                  <div
-                    style={{
-                      color: '#63687A',
-                      fontSize: '1rem',
-                      textAlign: 'center',
-                    }}
-                  >
-                    {piece.itemName}
-                  </div>
-                  <div style={{ color: '#63687A', marginBottom: '0.5rem' }}>
-                    {piece.description}
-                  </div>
-                  <input type="button" value="Order Now!" />
-                </div>
-              );
-            });
-          })}
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        {data.map((item, index) => {
+          return <TopDestination item={item} key={index} />;
+        })}
       </div>
     </div>
   );

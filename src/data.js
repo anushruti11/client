@@ -83,46 +83,52 @@ const data = [
       'Sightseeing Tours',
     ],
     mainImg:
-      'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      'https://www.hotelierindia.com/public/styles/full_img/public/images/2020/03/26/travel-4813654_1920.jpg?itok=va5ff5Dk',
 
     places: [
       { area: 'Red Fort',
-      description: 'This is golghar',
+      description: 'This is Red Fort',
       subImg:
-        'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://images.indianexpress.com/2018/06/red-fort-759-getty-images.jpg',
     },
     {
-      area: "Humayun' Tomb",
-      description: 'This is golghar',
+      area: "Humayun's Tomb",
+      description: 'This is Humayun\'s Tomb',
       subImg:
-        'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://cdn.britannica.com/54/156454-050-4E72CEE0/Humayuns-Tomb-Hamidah-Banu-Begam-Delhi-India-1569.jpg',
     },
     {
       area: 'Qutab Minar',
-      description: 'This is golghar',
+      description: 'This is Qutab Minar',
       subImg:
-        'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        'https://delhicapital.com/wp-content/uploads/2019/07/qutub-minar-640x383.jpg',
     },
     ],
     items: [
       {
-        itemName: 'Madhubani Painting',
-        description: 'Hand-made Painting',
+        itemName: 'Street Art',
+        description: 'Street Art',
         itemImg:
-          'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          'https://digimarconindia.in/wp-content/uploads/2019/03/29028686884_1300306746_b.jpg',
       },
       {
-        itemName: 'Lacquer Works',
-        description: 'Artistic lacquer ware craft',
+        itemName: 'Madhubani Painting',
+        description: 'Traditional hand-made Painting',
         itemImg:
-          'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          'https://tourism.bihar.gov.in/content/dam/bihar-tourism/images/handicrafts_product_photo/madhubani/madhubani_1.png/jcr:content/renditions/cq5dam.web.1280.765.jpeg',
+      },
+      {
+        itemName: 'Zardozi Embroidery',
+        description: 'Embroidery with golder thread', 
+        itemImg:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Close_Shot_of_the_Zardozi_%28Zardouzi%29_Embroidery_Cushion_Covers.jpg/800px-Close_Shot_of_the_Zardozi_%28Zardouzi%29_Embroidery_Cushion_Covers.jpg',
       },
     ],
   },
   {
     id: '3',
-    name: 'Mumbai',
-    description: 'Hello This is Mumbai',
+    name: 'Maharastra',
+    description: 'Hello This is Maharastra',
     badges: [
       'Sightseeing Tours',
       'Sightseeing Tours',
@@ -131,64 +137,64 @@ const data = [
       'Sightseeing Tours',
     ],
     mainImg:
-      'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      'https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/cover-image-of-Islands-In-Maharashtra_14th-jan.jpg',
 
     places: [
       {
-        area: 'Red Fort',
-        description: 'This is golghar',
+        area: 'Gateway of India',
+        description: 'This is Gateway of India',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/800px-Mumbai_03-2016_30_Gateway_of_India.jpg',
       },
       {
-        area: "Humayun' Tomb",
-        description: 'This is golghar',
+        area: "Ajanta and Ellora Caves",
+        description: 'Ajanta and Ellora Caves',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/31/92/93.jpg',
       },
       {
-        area: 'Qutab Minar',
-        description: 'This is golghar',
+        area: 'Marine Drive',
+        description: 'Marine Lines',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Marine_Lines_Mumbai_2021.jpg/1024px-Marine_Lines_Mumbai_2021.jpg',
       },
       {
-        area: 'India Gate',
-        description: 'This is golghar',
+        area: 'Shirdi',
+        description: 'Sai Baba Temple',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://images.newindianexpress.com/uploads/user/imagelibrary/2020/1/20/w900X450/home-slider-1_.jpg?w=640&dpr=1.0',
       },
       {
-        area: 'Jama Masjid',
-        description: 'This is golghar',
+        area: 'Lonavala',
+        description: 'Beautiful views of Western Ghats',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://upload.wikimedia.org/wikipedia/commons/d/dd/Lonavalamh.jpg',
       },
       {
-        area: 'Golghar',
-        description: 'This is golghar',
+        area: 'Mahabaleshwar',
+        description: 'Beautiful views of Western Ghats',
         subImg:
-          'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+          'https://www.holidify.com/images/bgImages/MAHABALESHWAR.jpg',
       },
     ],
     items: [
       {
-        itemName: 'Madhubani Painting',
-        description: 'Hand-made Painting',
+        itemName: 'Warli Paintings',
+        description: 'A tribal art form',
         itemImg:
-          'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          'https://5.imimg.com/data5/PI/TE/MY-13589378/2016-07-05-16-53-05-500x500.jpg',
       },
       {
-        itemName: 'Lacquer Works',
-        description: 'Artistic lacquer ware craft',
+        itemName: 'Kolhauri Chappals',
+        description: 'Artistic leather chappals',
         itemImg:
-          'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          'https://www.outlookindia.com/traveller/wp-content/uploads/2017/03/ART-AND-CRAFTS3_TI.jpg',
       },
       {
-        itemName: 'Wood Carvings',
-        description: 'Ancient art of wood carving',
+        itemName: 'Paithani Sari',
+        description: 'Pure silk woven sari',
         itemImg:
-          'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+          'https://www.outlookindia.com/traveller/wp-content/uploads/2017/03/ART-AND-CRAFTS2_TI.jpg',
       },
     ],
   },
