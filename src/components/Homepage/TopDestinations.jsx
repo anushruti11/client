@@ -1,5 +1,4 @@
 import './Homepage.css';
-import { useState } from 'react';
 
 function loadScript(src) {
   return new Promise((resolve) => {
@@ -16,8 +15,6 @@ function loadScript(src) {
 }
 
 const TopDestination = ({ item }) => {
-  const [name, setName] = useState('');
-
   async function displayRazorpay() {
     const res = await loadScript(
       'https://checkout.razorpay.com/v1/checkout.js'
@@ -48,7 +45,7 @@ const TopDestination = ({ item }) => {
         alert(response.razorpay_signature);
       },
       prefill: {
-        name,
+        name: '',
         email: '',
         phone_number: '',
       },
