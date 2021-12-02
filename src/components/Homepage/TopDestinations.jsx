@@ -1,59 +1,6 @@
 import './Homepage.css';
 
-function loadScript(src) {
-  return new Promise((resolve) => {
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = () => {
-      resolve(true);
-    };
-    script.onerror = () => {
-      resolve(false);
-    };
-    document.body.appendChild(script);
-  });
-}
-
 const TopDestination = ({ item }) => {
-  async function displayRazorpay() {
-    const res = await loadScript(
-      'https://checkout.razorpay.com/v1/checkout.js'
-    );
-
-    if (!res) {
-      alert('Razorpay SDK failed to load. Are you online?');
-      return;
-    }
-
-    const data = await fetch('http://localhost:1337/razorpay', {
-      method: 'POST',
-    }).then((t) => t.json());
-
-    console.log('dataaa', data);
-
-    const options = {
-      key: 'rzp_test_7NFjEzrn3WQR0c',
-      currency: data.currency,
-      amount: data.amount.toString(),
-      order_id: data.id,
-      name: 'Donation',
-      description: 'Thank you for nothing. Please give us some money',
-      image: 'http://localhost:1337/logo.svg',
-      handler: function (response) {
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
-      },
-      prefill: {
-        name: '',
-        email: '',
-        phone_number: '',
-      },
-    };
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-  }
-
   console.log(item.places);
   return (
     <div
@@ -100,12 +47,8 @@ const TopDestination = ({ item }) => {
                   justifyContent: 'space-evenly',
                 }}
               >
-                {item.badges.map((badge, index) => {
-                  return (
-                    <div key={index} className="destination-badge">
-                      {badge}
-                    </div>
-                  );
+                {item.badges.map((badge) => {
+                  return <div className="destination-badge">{badge}</div>;
                 })}
               </div>
             </div>
@@ -124,43 +67,54 @@ const TopDestination = ({ item }) => {
         >
           Iconic Places
         </div>
-        <div
+        <div 
           style={{
+            background:"#0F1624",
             display: 'flex',
+            flexDirection:'row',
             flexWrap: 'wrap',
             justifyContent: 'center',
           }}
         >
-          {item.places.map((place, index) => {
+       
+          {item.places.map((place) => {
             return (
-              <div
-                key={index}
+              <div 
                 style={{
-                  background: '#fff',
-                  width: '300px',
-                  height: '200px',
-                  padding: '0.5rem',
-                  margin: '1rem',
+                  color: '#0F1624',
+                    fontSize: '1rem',
+                    textAlign: 'center',
+                    paddingTop:'0.5rem',
+                
+                 
                 }}
               >
-                <img src={place.subImg} alt="item" width="200" height="80" />
-                <div
+              <div className="flip-card">
+                
+                <div className="flip-card-inner"
                   style={{
                     color: '#63687A',
                     fontSize: '1rem',
                     textAlign: 'center',
+                    paddingTop:'0.5rem',
+                   
+                    
                   }}
                 >
-                  {place.area}
-                </div>
-                <div style={{ color: '#63687A', marginBottom: '0.5rem' }}>
-                  {place.description}
-                </div>
-                <input
-                  type="button"
-                  value="Order Now!"
-                  onClick={displayRazorpay}
-                />
+                <div className="flip-card-front">
+                <img src={place.subImg} alt="item" width="250" height="250"/></div>
+                 
+               
+                <div className =" flip-card-back">
+                  <b>{place.area}</b> <br/>
+                 <span> {place.description} </span>
+                <div className="btn" >
+                  <button type="submit">
+                 Order Now!</button>
+                 </div>
+                 </div>
+                 </div>
+                 </div>
               </div>
             );
           })}
@@ -185,36 +139,33 @@ const TopDestination = ({ item }) => {
             justifyContent: 'center',
           }}
         >
-          {item.items.map((thing, index) => {
+          {item.items.map((thing) => {
             return (
-              <div
-                key={index}
+              <div className="flip-card">
+                
+                <div className="flip-card-inner"
                 style={{
-                  background: '#fff',
-                  width: '300px',
-                  height: '200px',
-                  padding: '0.5rem',
-                  margin: '1rem',
-                }}
-              >
-                <img src={thing.itemImg} alt="item" width="200" height="80" />
-                <div
-                  style={{
-                    color: '#000',
+                  color: '#63687A',
                     fontSize: '1rem',
                     textAlign: 'center',
-                  }}
-                >
-                  {thing.itemName}
-                </div>
-                <div style={{ color: '#63687A', marginBottom: '0.5rem' }}>
-                  {thing.description}
-                </div>
-                <input
-                  type="button"
-                  value="Order Now!"
-                  onClick={displayRazorpay}
-                />
+                    paddingTop:'0.5rem',
+                }}
+              >
+              <div className="flip-card-front">
+                <img src={thing.itemImg} alt="item" width="250" height="250" /></div>
+                <div className =" flip-card-back">
+                
+                  <b>{thing.itemName}</b> <br/>
+                
+                
+                  <span>{thing.description}</span>
+              
+                <div className="btn" >
+                  <button type="submit">
+                 Order Now!</button>
+                 </div>
+                 </div>
+              </div>
               </div>
             );
           })}
