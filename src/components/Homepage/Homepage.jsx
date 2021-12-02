@@ -34,21 +34,22 @@ const Homepage = () => {
         }}
       >
         <div
-          style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '500' }}
+          style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: '500', color:"#0F1624", fontFamily:"cursive"}}
         >
-          Find amazing things of INDIA! Anytime and everywhere
+         <b> Find amazing things of INDIA! Anytime and everywhere </b>
         </div>
         <div>
-          <div style={{ marginBottom: '1rem' }}>
+          <div style={{ marginBottom: '1rem'}} id ="box">
             <input
+              id="boxx"
               type="text"
               placeholder="Where are you going?"
               value={state}
               onChange={(e) => setState(e.target.value)}
             />
           </div>
-          <div>
-            <input type="button" value="Search" />
+          <div id ="box">
+            <input id="boxx" type="button" value="Search" />
           </div>
         </div>
       </div>
@@ -149,6 +150,7 @@ const Homepage = () => {
           alignItems: 'center',
         }}
       >
+      
         {data.map((item, index) => {
           return <TopDestination item={item} key={index} />;
         })}
