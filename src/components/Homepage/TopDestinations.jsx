@@ -1,20 +1,22 @@
 import './Homepage.css';
-import axios from 'axios';
+import { useState } from 'react';
+
+function loadScript(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
 
 const TopDestination = ({ item }) => {
-  function loadScript(src) {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = src;
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-      document.body.appendChild(script);
-    });
-  }
+  const [name, setName] = useState('');
 
   async function displayRazorpay() {
     const res = await loadScript(
@@ -26,51 +28,35 @@ const TopDestination = ({ item }) => {
       return;
     }
 
-    const result = await axios.post('/payment/orders');
+    const data = await fetch('http://localhost:1337/razorpay', {
+      method: 'POST',
+    }).then((t) => t.json());
 
-    if (!result) {
-      alert('Server error. Are you online?');
-      return;
-    }
-
-    const { amount, id: order_id, currency } = result.data;
+    console.log('dataaa', data);
 
     const options = {
-      key: 'rzp_test_7NFjEzrn3WQR0c', // Enter the Key ID generated from the Dashboard
-      amount: amount.toString(),
-      currency: currency,
-      name: 'Soumya Corp.',
-      description: 'Test Transaction',
-      // image: { logo },
-      order_id: order_id,
-      handler: async function (response) {
-        const data = {
-          orderCreationId: order_id,
-          razorpayPaymentId: response.razorpay_payment_id,
-          razorpayOrderId: response.razorpay_order_id,
-          razorpaySignature: response.razorpay_signature,
-        };
-
-        const result = await axios.post('/payment/success', data);
-
-        alert(result.data.msg);
+      key: 'rzp_test_7NFjEzrn3WQR0c',
+      currency: data.currency,
+      amount: data.amount.toString(),
+      order_id: data.id,
+      name: 'Donation',
+      description: 'Thank you for nothing. Please give us some money',
+      image: 'http://localhost:1337/logo.svg',
+      handler: function (response) {
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature);
       },
       prefill: {
-        name: 'Abhi',
-        email: 'example@example.com',
-        contact: '9999999999',
-      },
-      notes: {
-        address: 'Example Corporate Office',
-      },
-      theme: {
-        color: '#61dafb',
+        name,
+        email: '',
+        phone_number: '',
       },
     };
-
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
   }
+
   console.log(item.places);
   return (
     <div
@@ -117,8 +103,12 @@ const TopDestination = ({ item }) => {
                   justifyContent: 'space-evenly',
                 }}
               >
-                {item.badges.map((badge) => {
-                  return <div className="destination-badge">{badge}</div>;
+                {item.badges.map((badge, index) => {
+                  return (
+                    <div key={index} className="destination-badge">
+                      {badge}
+                    </div>
+                  );
                 })}
               </div>
             </div>
@@ -144,9 +134,10 @@ const TopDestination = ({ item }) => {
             justifyContent: 'center',
           }}
         >
-          {item.places.map((place) => {
+          {item.places.map((place, index) => {
             return (
               <div
+                key={index}
                 style={{
                   background: '#fff',
                   width: '300px',
@@ -197,9 +188,10 @@ const TopDestination = ({ item }) => {
             justifyContent: 'center',
           }}
         >
-          {item.items.map((thing) => {
+          {item.items.map((thing, index) => {
             return (
               <div
+                key={index}
                 style={{
                   background: '#fff',
                   width: '300px',
