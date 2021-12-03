@@ -9,6 +9,7 @@
   margin: 0.5rem;
 }
 
+
 .btn{
   margin-top: 30px;
 }
@@ -79,3 +80,14 @@ button:hover {
  padding-top: 60px;
 
 }
+
+#box{
+  margin-left: 40px;
+}
+#boxx{
+  border: 1px solid gray;
+  border-radius: 10rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
